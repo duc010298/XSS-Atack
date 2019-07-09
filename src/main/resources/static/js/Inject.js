@@ -3,8 +3,8 @@ var cookie = document.cookie;
 
 var object = {
     href: href,
-    cookie: cookie,
-    
+    cookie: cookie
+
 };
 
 $.ajax({
