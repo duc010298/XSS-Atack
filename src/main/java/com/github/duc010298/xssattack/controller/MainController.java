@@ -3,8 +3,8 @@ package com.github.duc010298.xssattack.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/")
@@ -12,7 +12,7 @@ public class MainController {
 
     @CrossOrigin(origins = "https://truejuice.vn")
     @PostMapping
-    public void Test(@RequestParam("object") String object) {
+    public void Test(@RequestBody String object) {
         System.out.println(object);
     }
 }
