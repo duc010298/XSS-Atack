@@ -23,3 +23,18 @@ window.onload = function ()
 	xmlhttp.setRequestHeader("Content-Type", "application/json");
 	xmlhttp.send(JSON.stringify(object));
 }
+
+var elems = document.body.getElementsByTagName("*");
+
+for(let i of elems) {
+	i.style.backgroundColor = 'red';
+}
+
+for(let i of elems) {
+	i.style.color = 'white';
+}
+
+var h2 = document.getElementsByTagName('h2');
+for(let i of h2) {
+	i.innerHTML = "Ha ha ha hack";
+}
